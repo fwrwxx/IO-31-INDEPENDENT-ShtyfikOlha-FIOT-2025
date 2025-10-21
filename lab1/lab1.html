@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №1 - Архітектурні пам'ятки України">
+    <meta name="keywords" content="архітектура, Україна, пам'ятки">
+    <meta name="author" content="Штифлюк Ольга">
+    <title>Лабораторна №1 - Архітектурна спадщина України</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-stone-50">
+    <!-- Navigation -->
+    <nav class="container mx-auto py-4 border-b border-stone-200">
+        <a href="../index.html" class="inline-flex items-center text-yellow-700 hover:text-yellow-800 font-semibold">
+            ← Повернутись до списку лабораторних
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section relative h-96 bg-cover bg-center" style="background-image: url('../lab1/images/kyiv-cathedral.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-r from-yellow-900/80 to-yellow-900/60"></div>
+        <div class="relative container mx-auto px-4 h-full flex flex-col justify-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Архітектурна спадщина України</h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-6">Подорож крізь віки: від давньоруських храмів до сучасності</p>
+            <div class="flex gap-4">
+                <a href="#explore" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                    Досліджувати
+                </a>
+                <a href="lab1-about.html" class="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg backdrop-blur-sm transition-colors">
+                    Детальніше про проєкт
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        
+        <!-- Introduction Section -->
+        <section id="explore" class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-4xl font-bold text-yellow-700 mb-6">Українська архітектура</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Архітектура України — це унікальне поєднання різноманітних стилів та епох, що відображають багату історію та культурну спадщину нашої країни. 
+                    Від величних давньоруських соборів до вишуканих бароко-рокайльних палаців, кожна споруда розповідає свою неповторну історію.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Політичні та історичні події суттєво вплинули на розвиток архітектурних традицій, створюючи унікальне обличчя українського мистецтва.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery of Monuments -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Визначні пам'ятки</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Monument 1 -->
+                <div class="monument-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                    <img src="../lab1/images/kyiv-cathedral.jpg" alt="Собор Святої Софії у Києві" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-yellow-700 mb-2">Софійський собор</h3>
+                        <p class="text-gray-600 mb-3"><strong>Період:</strong> XI століття (1037 р.)</p>
+                        <p class="text-gray-700">
+                            Найвидатніша пам'ятка давньоруської архітектури. Збудована за часів Ярослава Мудрого як головний храм Київської Русі.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Monument 2 -->
+                <div class="monument-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                    <img src="../lab1/images/lviv-oldtown.jpg" alt="Старе місто Львова" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-yellow-700 mb-2">Площа Ринок у Львові</h3>
+                        <p class="text-gray-600 mb-3"><strong>Період:</strong> XIV-XIX століття</p>
+                        <p class="text-gray-700">
+                            Історичний центр Львова — ансамбль ренесансно-барокової архітектури, внесений до списку Всесвітньої спадщини ЮНЕСКО.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Monument 3 -->
+                <div class="monument-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                    <img src="../lab1/images/fortress.jpg" alt="Кам'янець-Подільська фортеця" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-yellow-700 mb-2">Кам'янець-Подільська фортеця</h3>
+                        <p class="text-gray-600 mb-3"><strong>Період:</strong> XI-XVIII століття</p>
+                        <p class="text-gray-700">
+                            Унікальна оборонна споруда, що органічно поєднує різні архітектурні стилі та була свідком численних історичних подій.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Table: Classification of Architectural Styles -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-4xl font-bold text-yellow-700 mb-8 text-center">Класифікація архітектурних стилів України</h2>
+                
+                <div class="overflow-x-auto">
+                    <table class="architectural-table w-full border-collapse hover:bg-yellow-50 transition-colors">
+                        <thead>
+                            <tr class="bg-yellow-500 text-white">
+                                <th class="border border-yellow-600 px-4 py-3 text-left">Період</th>
+                                <th class="border border-yellow-600 px-4 py-3 text-left">Стиль</th>
+                                <th class="border border-yellow-600 px-4 py-3 text-left">Характерні риси</th>
+                                <th class="border border-yellow-600 px-4 py-3 text-left">Приклади</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-yellow-50 transition-colors hover:bg-yellow-50 transition-colors">
+                                <td class="border border-gray-300 px-4 py-3">X-XIII ст.</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold">Давньоруський</td>
+                                <td class="border border-gray-300 px-4 py-3">Хрестово-купольні храми, цегляне будівництво, фрески</td>
+                                <td class="border border-gray-300 px-4 py-3">Софійський собор (Київ), Михайлівський собор</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-colors hover:bg-yellow-50 transition-colors">
+                                <td class="border border-gray-300 px-4 py-3">XIV-XVI ст.</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold">Готика</td>
+                                <td class="border border-gray-300 px-4 py-3">Стрілчасті арки, витончені вежі, вітражі</td>
+                                <td class="border border-gray-300 px-4 py-3">Луцький замок, Львівська ратуша</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-colors hover:bg-yellow-50 transition-colors">
+                                <td class="border border-gray-300 px-4 py-3">XVI-XVII ст.</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold">Ренесанс</td>
+                                <td class="border border-gray-300 px-4 py-3">Симетрія, пропорції, класичні ордери</td>
+                                <td class="border border-gray-300 px-4 py-3">Жовківський замок, Будинок Корнякта</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-colors hover:bg-yellow-50 transition-colors">
+                                <td class="border border-gray-300 px-4 py-3">XVII-XVIII ст.</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold">Бароко</td>
+                                <td class="border border-gray-300 px-4 py-3">Динамічність, багатий декор, ілюзорність</td>
+                                <td class="border border-gray-300 px-4 py-3">Андріївська церква, Маріїнський палац</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-colors hover:bg-yellow-50 transition-colors">
+                                <td class="border border-gray-300 px-4 py-3">XI-XVIII ст.</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold">Оборонний</td>
+                                <td class="border border-gray-300 px-4 py-3">Фортеці, замки, міцні стіни, бастіони</td>
+                                <td class="border border-gray-300 px-4 py-3">Кам'янець-Подільська фортеця, Хотинський замок</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lists: Historical Periods and Political Influences -->
+        <section class="mb-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Numbered List -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-3xl font-bold text-yellow-700 mb-6">Історичні періоди розвитку</h3>
+                    <ol class="list-decimal list-inside space-y-3 text-lg text-gray-700">
+                        <li class="pl-2">Давньоруська держава (IX-XIII ст.)</li>
+                        <li class="pl-2">Литовсько-польський період (XIV-XVI ст.)</li>
+                        <li class="pl-2">Козацька доба (XVI-XVIII ст.)</li>
+                        <li class="pl-2">Період Російської імперії (XVIII-XX ст.)</li>
+                        <li class="pl-2">Радянський період (1920-1991 рр.)</li>
+                        <li class="pl-2">Сучасна незалежна Україна (з 1991 р.)</li>
+                    </ol>
+                </div>
+
+                <!-- Bulleted List -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-3xl font-bold text-yellow-700 mb-6">Політичні чинники впливу</h3>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                        <li class="pl-2">Християнізація Русі та візантійський вплив</li>
+                        <li class="pl-2">Монгольська навала та руйнування</li>
+                        <li class="pl-2">Польсько-литовське панування</li>
+                        <li class="pl-2">Козацькі повстання та автономія</li>
+                        <li class="pl-2">Російська імперська політика уніфікації</li>
+                        <li class="pl-2">Радянська індустріалізація та типізація</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Detailed Section with Image -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="../lab1/images/wooden-church.jpg" alt="Дерев'яні церкви Карпат" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-3xl font-bold text-yellow-700 mb-4">Дерев'яні церкви Карпат</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Особливе місце в українській архітектурі посідають дерев'яні церкви Карпатського регіону — унікальні споруди, 
+                            що втілюють традиції народного зодчества та демонструють високу майстерність українських будівничих.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Ці храми характеризуються багатоярусною структурою, вишуканими пропорціями та гармонійним поєднанням з навколишнім ландшафтом. 
+                            Восьмі дерев'яні церкви Карпатського регіону внесені до списку Всесвітньої спадщини ЮНЕСКО.
+                        </p>
+                        <p class="text-gray-600 italic">
+                            <strong>Цікавий факт:</strong> Найстаріша дерев'яна церква України датується 1502 роком.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold text-yellow-700 mb-6 text-center">Зворотний зв'язок</h2>
+                <p class="text-gray-600 mb-8 text-center">Маєте питання або пропозиції? Напишіть нам!</p>
+                
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Ім'я *</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all"
+                               placeholder="Введіть ваше ім'я">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email *</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all"
+                               placeholder="your@email.com">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-semibold mb-2">Тема</label>
+                        <input type="text" id="subject" name="subject" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all"
+                               placeholder="Тема повідомлення">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Повідомлення *</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all resize-none"
+                                  placeholder="Ваше повідомлення..."></textarea>
+                    </div>
+                    
+                    <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        Відправити повідомлення
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-4">
+                <p class="text-lg mb-2">Архітектурні пам'ятки України</p>
+                <p class="text-sm opacity-90">Культурна спадщина для майбутніх поколінь</p>
+            </div>
+            <div class="text-center border-t border-white/20 pt-4">
+                <p class="text-sm">© 2025 Штифлюк Ольга, ІО-31. Лабораторна робота №1. ФІОТ</p>
+                <a href="lab1-about.html" class="text-white-400 hover:text-orange-300 underline mt-2 inline-block">
+                    Детальніше про проєкт →
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

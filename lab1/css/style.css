@@ -1,0 +1,235 @@
+/* Custom Styles for Architectural Heritage of Ukraine */
+
+/* Color Palette - Autumn Theme */
+:root {
+    --primary-orange: #f97316;
+    --primary-orange-dark: #ea580c;
+    --secondary-yellow: #eab308;
+    --background-light: #fef3c7;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gradient Backgrounds */
+.header-gradient {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #eab308 100%);
+}
+
+.footer-gradient {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #eab308 100%);
+}
+
+.hero-gradient-overlay {
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.85) 0%, rgba(249, 115, 22, 0.75) 50%, rgba(234, 179, 8, 0.65) 100%);
+}
+
+/* Card Hover Effects */
+.lab-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateY(-5px);
+}
+
+.monument-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.monument-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Table Styling */
+.architectural-table {
+    font-size: 0.95rem;
+}
+
+.architectural-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.architectural-table td {
+    vertical-align: top;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .architectural-table {
+        font-size: 0.85rem;
+    }
+    
+    .architectural-table th,
+    .architectural-table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Form Animations */
+input:focus,
+textarea:focus,
+select:focus {
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* Button Hover Effects */
+button,
+.btn {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Accessibility - Focus Styles */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #f97316;
+    outline-offset: 2px;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Print Styles */
+@media print {
+    .header-gradient,
+    .footer-gradient,
+    nav,
+    button,
+    form {
+        display: none;
+    }
+    
+    body {
+        color: black;
+        background: white;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles if needed */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f97316;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ea580c;
+}
+
+:root {
+    --color-bg: #f9f6f1; /* білий тиньк */
+    --color-fg: #1b1b1b; /* графіт */
+    --color-primary: #3b6ea3; /* небесно-блакитний купол */
+    --color-secondary: #c29d63; /* охра / пісочний фасад */
+    --color-accent: #497b50; /* зелень смереки */
+    --color-muted: #e2d6c6; /* пастельна вапняна стіна */
+    --color-border: #d3c7b8; /* камінь */
+    --color-card: #ffffff;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+.header-gradient {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.footer-gradient {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+}
+
+.heritage-btn {
+    background-color: var(--color-secondary);
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.heritage-btn:hover {
+    background-color: var(--color-accent);
+}
+
+section div.bg-white {
+    border: 1px solid var(--color-border);
+}
+
+h2, h3, h4 {
+    color: var(--color-primary);
+}
+
+ul li::marker {
+    color: var(--color-accent);
+}
+
+.lab-card .bg-orange-500 {
+    background-color: var(--color-secondary);
+}
+
+.lab-card .bg-orange-500:hover {
+    background-color: var(--color-accent);
+}
+
+
+
+.lab-card {
+    border: 1px solid var(--color-border);
+}
+
+.opacity-60 {
+    opacity: 0.6;
+}
