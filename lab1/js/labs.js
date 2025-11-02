@@ -1,7 +1,7 @@
 // Масив лабораторних робіт
 const labs = [
   { number: 1, status: "Доступна", title: "Структура HTML-документа", description: "Основні теги, таблиці, зображення, списки, форми. Робота з GitHub." },
-  { number: 2, status: "Скоро", title: "Скоро", description: "Теги" },
+  { number: 2, status: "Доступна", title: "Каскадні таблиці стилів. Селектори. Ідентифікатори", description: "Каскадні таблиці стилів, типи селекторів та ідентифікатори." },
   { number: 3, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 4, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 5, status: "Скоро", title: "Скоро", description: "Теги" },
@@ -20,7 +20,7 @@ function renderLabCards(containerSelector) {
     const statusColor = lab.status === "Доступна" ? "bg-[#497b50]" : "bg-[#eab308]";
     const cardBg = lab.status === "Доступна" ? "bg-orange-500 hover:bg-orange-600" : "bg-gray-400";
     const button = lab.status === "Доступна" 
-      ? `<a href="./lab1/lab${lab.number}.html" class="block w-full text-center ${cardBg} text-white font-semibold py-2 px-4 rounded transition-colors">Переглянути роботу</a>`
+      ? `<a href="./lab${lab.number}/lab${lab.number}.html" class="block w-full text-center ${cardBg} text-white font-semibold py-2 px-4 rounded transition-colors">Переглянути роботу</a>`
       : `<button disabled class="w-full bg-gray-300 text-gray-500 font-semibold py-2 px-4 rounded cursor-not-allowed">У розробці</button>`;
 
     return `
@@ -40,8 +40,3 @@ function renderLabCards(containerSelector) {
     `;
   }).join("");
 }
-
-// Виклик функції після завантаження сторінки
-document.addEventListener("DOMContentLoaded", () => {
-  renderLabCards(".labs-container");
-});
