@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Звіт з лабораторної роботи №2 - Каскадні таблиці стилів">
+    <meta name="author" content="Штифлюк Ольга">
+    <title>Звіт - Лабораторна робота №2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="../lab1/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="lab2.html" class="nav-link">До лабораторної №2</a>
+                <a href="../index.html" class="nav-link">До списку лабораторних</a>
+                <a href="#selectors" class="nav-link">Селектори</a>
+                <a href="#styling" class="nav-link">Стилізація</a>
+                <a href="#advanced" class="nav-link">Просунуте CSS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="report-hero">
+        <div class="container">
+            <h1 class="hero-title">Лабораторна робота №2</h1>
+            <p class="hero-subtitle">Каскадні таблиці стилів. Селектори. Ідентифікатори</p>
+            <p class="text-muted">Штифлюк Ольга, ІО-31, ФІОТ</p>
+        </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <h2 class="section-title">Зміст звіту</h2>
+                <ol class="toc-list">
+                    <li><a href="#selectors">Селектори (тегу, класу, ідентифікатора)</a></li>
+                    <li><a href="#other-selectors">Інші селектори (дочірні, сусідні, атрибутів)</a></li>
+                    <li><a href="#styling">Стильове оформлення (шрифти, текст, таблиці, фон, списки)</a></li>
+                    <li><a href="#advanced">CSS Просунутий (анімації, градієнти, трансформації)</a></li>
+                    <li><a href="#conclusion">Висновки</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Селектори тегу -->
+    <section id="selectors" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">1. Селектори тегу</h2>
+            
+            <div class="code-example">
+                <h3 class="example-title">HTML код:</h3>
+                <pre class="code-block"><code>&lt;p&gt;Це звичайний параграф з базовим стилем&lt;/p&gt;
+&lt;h2&gt;Заголовок другого рівня&lt;/h2&gt;
+&lt;section&gt;Секція з особливим оформленням&lt;/section&gt;</code></pre>
+            </div>
+            
+            <div class="code-example">
+                <h3 class="example-title">CSS код:</h3>
+                <pre class="code-block"><code>/* Селектор тегу для параграфів */
+p {
+  line-height: 1.8;
+  color: hsl(var(--text));
+  margin-bottom: 1rem;
+}
+
+/* Селектор тегу для заголовків */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  margin-bottom: 1.5rem;
+}
+
+/* Селектор тегу для секцій */
+section {
+  padding: 2rem 0;
+}</code></pre>
+            </div>
+            
+            <div class="preview-box">
+                <h3 class="example-title">Результат:</h3>
+                <p>Це звичайний параграф з базовим стилем</p>
+                <h2>Заголовок другого рівня</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Селектори класу -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">2. Селектори класу</h2>
+            
+            <div class="code-example">
+                <h3 class="example-title">HTML код:</h3>
+                <pre class="code-block"><code>&lt;div class="card"&gt;
+  &lt;h3 class="card-title"&gt;Заголовок картки&lt;/h3&gt;
+  &lt;p class="text-content"&gt;Контент картки&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;button class="btn btn-primary"&gt;Основна кнопка&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Вторинна кнопка&lt;/button&gt;</code></pre>
+            </div>
+            
+            <div class="code-example">
+                <h3 class="example-title">CSS код:</h3>
+                <pre class="code-block"><code>/* Базовий клас картки */
+.card {
+  background: hsl(var(--card));
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+/* Класи для кнопок */
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: hsl(var(--primary));
+  color: white;
+}
+
+.btn-secondary {
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}</code></pre>
+            </div>
+            
+            <div class="preview-box">
+                <h3 class="example-title">Результат:</h3>
+                <div class="card" style="max-width: 400px;">
+                    <h3 class="card-title">Заголовок картки</h3>
+                    <p class="text-content">Контент картки з красивим оформленням</p>
+                </div>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                    <button class="btn btn-primary">Основна кнопка</button>
+                    <button class="btn btn-secondary">Вторинна кнопка</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Селектори ідентифікатора -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">3. Селектори ідентифікатора</h2>
+            
+            <div class="code-example">
+                <h3 class="example-title">HTML код:</h3>
+                <pre class="code-block"><code>&lt;header id="hero"&gt;
+  &lt;h1&gt;Унікальний заголовок&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;form id="contactForm"&gt;
+  &lt;input type="text" /&gt;
+&lt;/form&gt;
+
+&lt;footer id="mainFooter"&gt;
+  &lt;p&gt;Футер сторінки&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </div>
+            
+            <div class="code-example">
+                <h3 class="example-title">CSS код:</h3>
+                <pre class="code-block"><code>/* Селектор ID для hero секції */
+#hero {
+  min-height: 400px;
+  background: linear-gradient(135deg, 
+    hsl(var(--primary)) 0%, 
+    hsl(var(--primary-dark)) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Селектор ID для форми */
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: hsl(var(--card));
+}
+
+/* Селектор ID для футера */
+#mainFooter {
+  background: hsl(var(--primary));
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}</code></pre>
+            </div>
+            
+            <div class="preview-box">
+                <h3 class="example-title">Пояснення:</h3>
+                <p class="text-content">
+                    ID використовується для унікальних елементів сторінки (hero, форми, футер). 
+                    Кожен ID може використовуватись лише один раз на сторінці.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Інші селектори -->
+    <section id="other-selectors" class="section">
+        <div class="container">
+            <h2 class="section-title">4. Інші селектори</h2>
+            
+            <div class="grid-2">
+                <div class="code-example">
+                    <h3 class="example-title">Дочірні селектори (&gt;)</h3>
+                    <pre class="code-block"><code>/* Лише безпосередні нащадки */
+.nav-content > a {
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+.card > h3 {
+  margin-top: 0;
+}</code></pre>
+                </div>
+                
+                <div class="code-example">
+                    <h3 class="example-title">Сусідні селектори (+)</h3>
+                    <pre class="code-block"><code>/* Елемент одразу після */
+h2 + p {
+  font-size: 1.1rem;
+  color: hsl(var(--text-muted));
+}
+
+.card-title + .text-content {
+  margin-top: 0.5rem;
+}</code></pre>
+                </div>
+                
+                <div class="code-example">
+                    <h3 class="example-title">Селектори атрибутів</h3>
+                    <pre class="code-block"><code>/* За наявністю атрибута */
+input[type="email"] {
+  border-color: hsl(var(--primary));
+}
+
+/* За значенням атрибута */
+a[href^="https://"] {
+  color: hsl(var(--accent));
+}
+
+img[alt] {
+  border: 2px solid hsl(var(--border));
+}</code></pre>
+                </div>
+                
+                <div class="code-example">
+                    <h3 class="example-title">Універсальний селектор (*)</h3>
+                    <pre class="code-block"><code>/* Для всіх елементів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* У контексті */
+.card * {
+  transition: all 0.3s ease;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Стильове оформлення -->
+    <section id="styling" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">5. Стильове оформлення</h2>
+            
+            <!-- Шрифти -->
+            <div class="card">
+                <h3 class="subsection-title">5.1 Шрифти</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Системні шрифти */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+               'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Різні розміри */
+.hero-title { font-size: 3.5rem; font-weight: 700; }
+.section-title { font-size: 2.5rem; font-weight: 600; }
+.text-content { font-size: 1rem; line-height: 1.8; }
+
+/* Стилізація тексту */
+.text-muted { 
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}</code></pre>
+                </div>
+                
+                <div class="preview-box">
+                    <h3 class="example-title">Приклади:</h3>
+                    <p style="font-size: 2rem; font-weight: 700;">Великий жирний текст</p>
+                    <p style="font-size: 1.2rem; line-height: 1.8;">Звичайний параграф з гарною висотою рядка</p>
+                    <p class="text-muted">М'який сірий текст</p>
+                </div>
+            </div>
+            
+            <!-- Фон та кольори -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">5.2 Фон та кольори</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Градієнтні фони */
+.hero-section {
+  background: linear-gradient(135deg, 
+    hsl(var(--primary)) 0%, 
+    hsl(var(--primary-dark)) 100%);
+}
+
+/* Напівпрозорі фони */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Кольори з CSS змінних */
+.text-primary { color: hsl(var(--primary)); }
+.bg-card { background: hsl(var(--card)); }
+.border-accent { border-color: hsl(var(--accent)); }</code></pre>
+                </div>
+                
+                <div class="preview-box" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div style="width: 150px; height: 100px; background: linear-gradient(135deg, #D4A574 0%, #8B6914 100%); border-radius: 8px;"></div>
+                    <div style="width: 150px; height: 100px; background: rgba(212, 165, 116, 0.2); backdrop-filter: blur(10px); border-radius: 8px; border: 1px solid #D4A574;"></div>
+                    <div style="width: 150px; height: 100px; background: hsl(39, 56%, 90%); border-radius: 8px;"></div>
+                </div>
+            </div>
+            
+            <!-- Таблиці -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">5.3 Таблиці</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: hsl(var(--card));
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.data-table thead {
+  background: hsl(var(--primary));
+  color: white;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.data-table tbody tr:hover {
+  background: hsl(var(--accent) / 0.1);
+  transition: background 0.3s ease;
+}</code></pre>
+                </div>
+                
+                <div class="preview-box">
+                    <table class="data-table" style="max-width: 500px;">
+                        <thead>
+                            <tr>
+                                <th>Назва</th>
+                                <th>Значення</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Рік заснування</td>
+                                <td>1037</td>
+                            </tr>
+                            <tr>
+                                <td>Куполів</td>
+                                <td>13</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Списки -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">5.4 Списки</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Нумерований список */
+.toc-list {
+  list-style: decimal;
+  padding-left: 2rem;
+}
+
+.toc-list li {
+  padding: 0.5rem 0;
+  line-height: 1.8;
+}
+
+/* Маркерований список */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.feature-item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: hsl(var(--primary));
+  font-weight: bold;
+}</code></pre>
+                </div>
+                
+                <div class="preview-box">
+                    <ul class="feature-list">
+                        <li class="feature-item">Перший пункт списку</li>
+                        <li class="feature-item">Другий пункт списку</li>
+                        <li class="feature-item">Третій пункт списку</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Контури та рамки -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">5.5 Контури та рамки</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Різні типи рамок */
+.card {
+  border: 1px solid hsl(var(--border));
+  border-radius: 12px;
+}
+
+.btn:focus {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Тіні для глибини */
+.hover-scale {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CSS Просунутий -->
+    <section id="advanced" class="section">
+        <div class="container">
+            <h2 class="section-title">6. CSS Просунутий</h2>
+            
+            <!-- Анімації -->
+            <div class="card">
+                <h3 class="subsection-title">6.1 Анімації та трансформації</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Keyframe анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Трансформації при hover */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}</code></pre>
+                </div>
+                
+                <div class="preview-box">
+                    <div class="hover-scale card" style="max-width: 200px; text-align: center; cursor: pointer;">
+                        Наведи на мене!
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flexbox та Grid -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">6.2 Сучасні Layout системи</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Flexbox */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* CSS Grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+                </div>
+            </div>
+            
+            <!-- CSS змінні -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">6.3 CSS змінні (Custom Properties)</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>:root {
+  /* Кольори */
+  --primary: 39 56% 64%;
+  --primary-dark: 39 56% 28%;
+  --secondary: 39 56% 90%;
+  --accent: 24 71% 56%;
+  
+  /* Розміри */
+  --container-max-width: 1200px;
+  --border-radius: 12px;
+  
+  /* Анімації */
+  --transition-speed: 0.3s;
+}
+
+/* Використання змінних */
+.card {
+  background: hsl(var(--secondary));
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+}</code></pre>
+                </div>
+            </div>
+            
+            <!-- Псевдоелементи -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3 class="subsection-title">6.4 Псевдоелементи та псевдокласи</h3>
+                <div class="code-example">
+                    <pre class="code-block"><code>/* Псевдоелементи */
+.feature-item::before {
+  content: "✓";
+  color: hsl(var(--primary));
+  margin-right: 0.5rem;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(...);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Псевдокласи */
+.nav-link:hover {
+  color: hsl(var(--primary));
+}
+
+.data-table tr:nth-child(even) {
+  background: hsl(var(--accent) / 0.05);
+}
+
+input:focus {
+  border-color: hsl(var(--primary));
+  outline: none;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Висновки -->
+    <section id="conclusion" class="section section-alt">
+        <div class="container">
+            <div class="card">
+                <h2 class="section-title">Висновки</h2>
+                <div class="text-content">
+                    <p style="margin-bottom: 1rem;">
+                        У ході виконання лабораторної роботи №2 було опановано основні концепції каскадних таблиць стилів 
+                        та набуто практичних навичок роботи з різними типами селекторів.
+                    </p>
+                    
+                    <h3 class="subsection-title">Основні досягнення:</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <strong>Селектори:</strong> Застосовано селектори тегів, класів, ідентифікаторів, 
+                            дочірні, сусідні селектори та селектори атрибутів для точного таргетування елементів.
+                        </li>
+                        <li class="feature-item">
+                            <strong>Стилізація тексту:</strong> Використано різноманітні властивості для роботи зі шрифтами, 
+                            розмірами, вагою, висотою рядка та декоративними елементами.
+                        </li>
+                        <li class="feature-item">
+                            <strong>Кольори та фони:</strong> Створено систему кольорів на основі HSL, застосовано градієнти, 
+                            напівпрозорі фони та ефект скла (glassmorphism).
+                        </li>
+                        <li class="feature-item">
+                            <strong>Layout системи:</strong> Використано сучасні підходи до створення макетів за допомогою 
+                            Flexbox та CSS Grid для адаптивного дизайну.
+                        </li>
+                        <li class="feature-item">
+                            <strong>Анімації:</strong> Додано плавні переходи, трансформації та keyframe анімації для 
+                            покращення користувацького досвіду.
+                        </li>
+                        <li class="feature-item">
+                            <strong>Просунуте CSS:</strong> Застосовано CSS змінні, псевдоелементи, псевдокласи та 
+                            медіа-запити для створення професійного веб-застосунку.
+                        </li>
+                    </ul>
+                    
+                    <p style="margin-top: 1.5rem;">
+                        Створений веб-застосунок демонструє комплексне використання CSS для створення сучасного, 
+                        адаптивного та естетично привабливого інтерфейсу. Усі технології інтегровані в єдину 
+                        дизайн-систему, що забезпечує консистентність та підтримуваність коду.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2025 Штифлюк Ольга, ІО-31. Лабораторна робота №2. ФІОТ</p>
+                <a href="lab2.html" class="text-white" style="text-decoration: underline;">Повернутись на головну</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../lab1/js/main.js"></script>
+</body>
+</html>
