@@ -3,7 +3,7 @@ const labs = [
   { number: 1, status: "Доступна", title: "Структура HTML-документа", description: "Основні теги, таблиці, зображення, списки, форми. Робота з GitHub." },
   { number: 2, status: "Доступна", title: "Оформлення текстових елементів в HTML-документах", description: "Каскадні таблиці стилів, типи селекторів та ідентифікатори." },
   { number: 3, status: "Доступна", title: "Адаптація верстки сторінки", description: "Блокова верстка. Верстка засобами CSS та Flexbox. Адаптивна верстка. Медія-запити. Метатег viewport." },
-  { number: 4, status: "Скоро", title: "Скоро", description: "Теги" },
+  { number: 4, status: "Доступна", title: "Основи JAVASCRIPT у HTML-документі", description: "Шаблонні рядки. Керування порядком обчислень. Масиви. Методи масивів. Функції." },
   { number: 5, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 6, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 7, status: "Скоро", title: "Скоро", description: "Теги" },
