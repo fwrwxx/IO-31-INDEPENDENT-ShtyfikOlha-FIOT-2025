@@ -5,7 +5,7 @@ const labs = [
   { number: 3, status: "Доступна", title: "Адаптація верстки сторінки", description: "Блокова верстка. Верстка засобами CSS та Flexbox. Адаптивна верстка. Медія-запити. Метатег viewport." },
   { number: 4, status: "Доступна", title: "Основи JAVASCRIPT у HTML-документі", description: "Шаблонні рядки. Керування порядком обчислень. Масиви. Методи масивів. Функції." },
   { number: 5, status: "Доступна", title: "JavaScript об'єкти та Callback", description: "Методи об'єкта, масиви об'єктів, деструктуризація, callback, стрілочні функції" },
-  { number: 6, status: "Скоро", title: "Скоро", description: "Теги" },
+  { number: 6, status: "Доступна", title: "DOM, Події та Делегування", description: "Прототипи. Класи. Об'єктна модель документа (DOM). Події. Об'єкт події. Делегування подій." },
   { number: 7, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 8, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 9, status: "Скоро", title: "Скоро", description: "Теги" }
