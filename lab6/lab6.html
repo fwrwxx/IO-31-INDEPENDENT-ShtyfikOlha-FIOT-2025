@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №6 - Прототипи, Класи, DOM, Події">
+    <meta name="author" content="Штифлюк Ольга">
+    <title>Лабораторна робота №6 - DOM та Події</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../lab1/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="nav-logo">DOM Events Lab 6</a>
+                <div class="nav-links">
+                    <a href="../../" class="nav-link">Головна</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Лабораторна робота №6</span>
+                </div>
+                <h1 class="hero-title">DOM, Події та Делегування</h1>
+                <p class="hero-subtitle">Прототипи. Класи. Об'єктна модель документа (DOM). Події. Об'єкт події. Делегування подій.</p>
+                <p class="hero-info">Штифлюк Ольга, ІО-31, ФІОТ Варіант 24 (парний)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Delegation Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Делегування подій</h2>
+                <p class="section-description">Натисніть на товар, щоб відкрити модальне вікно з деталями</p>
+            </div>
+
+            <div class="products-grid" id="products-container">
+                <div class="product-card" data-id="1" data-name="Ноутбук Dell XPS 15" data-price="45000" data-description="Потужний ноутбук з процесором Intel Core i7, 16GB RAM, 512GB SSD">
+                    <div class="product-icon">💻</div>
+                    <h3>Ноутбук Dell XPS 15</h3>
+                    <p class="product-price">45 000 грн</p>
+                </div>
+                <div class="product-card" data-id="2" data-name="Смартфон iPhone 14" data-price="32000" data-description="Новітній смартфон Apple з чіпом A15 Bionic, камерою 48MP">
+                    <div class="product-icon">📱</div>
+                    <h3>Смартфон iPhone 14</h3>
+                    <p class="product-price">32 000 грн</p>
+                </div>
+                <div class="product-card" data-id="3" data-name="Навушники Sony WH-1000XM5" data-price="12000" data-description="Бездротові навушники з активним шумопридушенням">
+                    <div class="product-icon">🎧</div>
+                    <h3>Навушники Sony</h3>
+                    <p class="product-price">12 000 грн</p>
+                </div>
+                <div class="product-card" data-id="4" data-name="Планшет iPad Air" data-price="25000" data-description="Планшет Apple з чіпом M1, дисплеєм Liquid Retina 10.9\"">
+                    <div class="product-icon">📲</div>
+                    <h3>Планшет iPad Air</h3>
+                    <p class="product-price">25 000 грн</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section class="tasks-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Завдання варіанту 24</h2>
+                <p class="section-description">Завдання: 2, 4, 6, 7, 8, 9, 10</p>
+            </div>
+
+            <div class="tasks-grid">
+                <!-- Task 2 -->
+                <div class="task-card" data-color="teal">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 2</span>
+                            <h3 class="task-title">SWAP ME</h3>
+                            <p class="task-description">Обмін вмістом між двома інпутами</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <input type="text" id="input1" class="task-input" placeholder="Перше поле" value="Hello">
+                        <input type="text" id="input2" class="task-input" placeholder="Друге поле" value="World">
+                        <button class="task-button" onclick="swapInputs()">
+                            <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                            </svg>
+                            SWAP ME
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Task 4 -->
+                <div class="task-card" data-color="coral">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 4</span>
+                            <h3 class="task-title">Зміна розміру блоку</h3>
+                            <p class="task-description">Збільшення/зменшення квадрата на 15px</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <div id="resizable-box" class="resizable-box"></div>
+                        <div class="button-group">
+                            <button class="task-button" onclick="decreaseBox()">
+                                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                Зменшити
+                            </button>
+                            <button class="task-button" onclick="increaseBox()">
+                                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                Збільшити
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 6 -->
+                <div class="task-card" data-color="purple">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 6</span>
+                            <h3 class="task-title">Визначення кліку</h3>
+                            <p class="task-description">Клік всередині зеленого прямокутника?</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <p class="task-hint">Натисніть у будь-якому місці. Консоль покаже чи ви потрапили в зелену зону.</p>
+                        <div id="place" class="click-area">
+                            Натисни тут!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 7 -->
+                <div class="task-card" data-color="blue">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                <polyline points="10 17 15 12 10 7"></polyline>
+                                <line x1="15" y1="12" x2="3" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 7</span>
+                            <h3 class="task-title">Форма логіну</h3>
+                            <p class="task-description">Валідація та обробка форми входу</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <form class="login-form" id="login-form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="task-input" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" class="task-input" placeholder="••••••••">
+                            </div>
+                            <button type="submit" class="task-button">
+                                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                    <polyline points="10 17 15 12 10 7"></polyline>
+                                </svg>
+                                Log in
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Task 8 -->
+                <div class="task-card" data-color="orange">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 8v8"></path>
+                                <path d="M8 12h8"></path>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 8</span>
+                            <h3 class="task-title">Зміна кольору фону</h3>
+                            <p class="task-description">Випадковий hex-колір для body</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <p class="color-display">Background color: <span id="color-value">-</span></p>
+                        <button class="task-button" onclick="changeBackgroundColor()">
+                            <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6M5.6 5.6l4.2 4.2m4.2 4.2l4.2 4.2M1 12h6m6 0h6M5.6 18.4l4.2-4.2m4.2-4.2l4.2-4.2"></path>
+                            </svg>
+                            Change color
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Task 9 -->
+                <div class="task-card" data-color="green">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 9</span>
+                            <h3 class="task-title">Створення колекції</h3>
+                            <p class="task-description">Генерація кольорових квадратів (1-100)</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <div class="button-group">
+                            <input type="number" id="boxes-amount" class="task-input" placeholder="1-100" min="1" max="100">
+                            <button class="task-button" onclick="createBoxes()">Create</button>
+                            <button class="task-button" onclick="destroyBoxes()">Destroy</button>
+                        </div>
+                        <div id="boxes" class="boxes-container"></div>
+                    </div>
+                </div>
+
+                <!-- Task 10 -->
+                <div class="task-card" data-color="pink">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 10</span>
+                            <h3 class="task-title">Аналіз категорій</h3>
+                            <p class="task-description">Підрахунок кількості категорій та елементів</p>
+                        </div>
+                    </div>
+                    <div class="task-content">
+                        <ul id="categories">
+                            <li class="item">
+                                <h2>Animals</h2>
+                                <ul>
+                                    <li>Dog</li>
+                                    <li>Cat</li>
+                                    <li>Bird</li>
+                                    <li>Fish</li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h2>Products</h2>
+                                <ul>
+                                    <li>Bread</li>
+                                    <li>Parsley</li>
+                                    <li>Cheese</li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h2>Technologies</h2>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button class="task-button" onclick="analyzeCategories()">
+                            <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                            Аналізувати
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-header">
+                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <h3>Інструкції</h3>
+                </div>
+                <p class="info-text">
+                    Натисніть на кнопки у завданнях для виконання відповідних дій. 
+                    Результати відображаються у консолі браузера (F12 → Console).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-icon" id="modal-icon"></div>
+            <h2 id="modal-title"></h2>
+            <p class="modal-price" id="modal-price"></p>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Штифлюк Ольга, ІО-31. Лабораторна робота №6. ФІОТ</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
