@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма зворотного зв'язку - Lab 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../lab1/images/favicon.ico">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">← Назад до завдань</a>
+                <div class="nav-links">
+                    <a href="../../" class="nav-link">Головна</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 2rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Форма зворотного зв'язку</h1>
+                <p class="hero-subtitle" style="font-size: 1rem;">Дані зберігаються в localStorage при введенні</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tasks-section">
+        <div class="container">
+            <div class="form-container">
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="your@email.com"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea" 
+                            placeholder="Введіть ваше повідомлення..."
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Штифлюк Ольга, ІО-31. Lab 7 - Form</p>
+        </div>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+</html>

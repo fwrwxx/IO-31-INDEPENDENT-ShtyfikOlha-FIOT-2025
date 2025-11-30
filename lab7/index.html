@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №7 - Web Storage API, Асинхронність, Проміси, HTTP-запити">
+    <meta name="author" content="Штифлюк Ольга">
+    <title>Лабораторна робота №7 - Web Storage & Async</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../lab1/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="nav-logo">JavaScript Lab #7</a>
+                <div class="nav-links">
+                    <a href="../../" class="nav-link">Головна</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Лабораторна робота №7</span>
+                </div>
+                <h1 class="hero-title">Web Storage API & Асинхронність</h1>
+                <p class="hero-subtitle">LocalStorage, Проміси, HTTP-запити, REST API, Пагінація</p>
+                <p class="hero-info">Штифлюк Ольга, ІО-31, ФІОТ • Варіант 24 (парний)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section class="tasks-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Завдання</h2>
+                <p class="section-description">
+                    Виберіть завдання для перегляду
+                </p>
+            </div>
+
+            <div class="tasks-grid">
+                <!-- Task 1: Gallery -->
+                <div class="task-card" data-color="blue">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 1</span>
+                            <h3 class="task-title">Галерея зображень</h3>
+                            <p class="task-description">
+                                Галерея з модальним вікном (basicLightbox)
+                            </p>
+                        </div>
+                    </div>
+                    <a href="gallery.html" class="task-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        Відкрити
+                    </a>
+                </div>
+
+                <!-- Task 2: Form -->
+                <div class="task-card" data-color="purple">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 2</span>
+                            <h3 class="task-title">Форма зворотного зв'язку</h3>
+                            <p class="task-description">
+                                LocalStorage для збереження даних форми
+                            </p>
+                        </div>
+                    </div>
+                    <a href="form.html" class="task-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        Відкрити
+                    </a>
+                </div>
+
+                <!-- Task 3: Timer -->
+                <div class="task-card" data-color="green">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 3</span>
+                            <h3 class="task-title">Таймер зворотного відліку</h3>
+                            <p class="task-description">
+                                Countdown timer з вибором дати (flatpickr)
+                            </p>
+                        </div>
+                    </div>
+                    <a href="timer.html" class="task-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        Відкрити
+                    </a>
+                </div>
+
+                <!-- Task 4: Promise -->
+                <div class="task-card" data-color="orange">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 4</span>
+                            <h3 class="task-title">Генератор промісів</h3>
+                            <p class="task-description">
+                                Створення Promise з затримкою
+                            </p>
+                        </div>
+                    </div>
+                    <a href="promise.html" class="task-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        Відкрити
+                    </a>
+                </div>
+
+                <!-- Task 5: API Search -->
+                <div class="task-card" data-color="indigo">
+                    <div class="task-color-line"></div>
+                    <div class="task-header">
+                        <div class="task-icon-wrapper">
+                            <svg class="task-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <div class="task-info">
+                            <span class="task-badge">Завдання 5</span>
+                            <h3 class="task-title">Пошук зображень</h3>
+                            <p class="task-description">
+                                HTTP-запити до Pixabay API, SimpleLightbox
+                            </p>
+                        </div>
+                    </div>
+                    <a href="search.html" class="task-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                        Відкрити
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Card -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-header">
+                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <h3>Про лабораторну роботу</h3>
+                </div>
+                <p class="info-text">
+                    Ця лабораторна робота охоплює роботу з Web Storage API (localStorage), 
+                    асинхронним програмуванням (проміси, async/await), HTTP-запитами до REST API, 
+                    та інтеграцією зовнішніх бібліотек.
+                </p>
+                <div class="info-tip">
+                    <div class="tip-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="tip-title">Використані технології</p>
+                        <p class="tip-text">
+                            basicLightbox, flatpickr, iziToast, SimpleLightbox, Pixabay API, 
+                            LocalStorage, Promises, Fetch API
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2025 Штифлюк Ольга, ІО-31. Лабораторна робота №7. ФІОТ
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

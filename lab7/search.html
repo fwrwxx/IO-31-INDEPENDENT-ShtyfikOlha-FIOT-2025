@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук зображень - Lab 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css">
+    <link rel="icon" type="image/x-icon" href="../lab1/images/favicon.ico">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">← Назад до завдань</a>
+                <div class="nav-links">
+                    <a href="../../" class="nav-link">Головна</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 2rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Пошук зображень</h1>
+                <p class="hero-subtitle" style="font-size: 1rem;">Пошук фотографій через Pixabay API</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tasks-section">
+        <div class="container">
+            <form class="search-form">
+                <input 
+                    type="text" 
+                    name="searchQuery" 
+                    class="search-input" 
+                    placeholder="Введіть слово для пошуку..."
+                    autocomplete="off"
+                >
+                <button type="submit" class="search-button">
+                    <svg style="width: 20px; height: 20px; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    Пошук
+                </button>
+            </form>
+            
+            <div class="loader">
+                <div class="spinner"></div>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Завантаження...</p>
+            </div>
+            
+            <ul class="image-gallery"></ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Штифлюк Ольга, ІО-31. Lab 7 - Search</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
