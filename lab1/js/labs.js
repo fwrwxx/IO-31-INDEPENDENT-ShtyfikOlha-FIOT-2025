@@ -6,7 +6,7 @@ const labs = [
   { number: 4, status: "Доступна", title: "Основи JAVASCRIPT у HTML-документі", description: "Шаблонні рядки. Керування порядком обчислень. Масиви. Методи масивів. Функції." },
   { number: 5, status: "Доступна", title: "JavaScript об'єкти та Callback", description: "Методи об'єкта, масиви об'єктів, деструктуризація, callback, стрілочні функції" },
   { number: 6, status: "Доступна", title: "DOM, Події та Делегування", description: "Прототипи. Класи. Об'єктна модель документа (DOM). Події. Об'єкт події. Делегування подій." },
-  { number: 7, status: "Скоро", title: "Скоро", description: "Теги" },
+  { number: 7, status: "Доступна", title: "Web Storage API & Асинхронність", description: "LocalStorage, Проміси, HTTP-запити, REST API, Пагінація" },
   { number: 8, status: "Скоро", title: "Скоро", description: "Теги" },
   { number: 9, status: "Скоро", title: "Скоро", description: "Теги" }
 ];
